@@ -1,0 +1,88 @@
+{
+  "name": "Tree Map Update",
+  "enabled": true,
+  "controls": [
+    "UberStyle",
+    "DirtyDataIndicator",
+    "Color",
+    "FiltersIndicator",
+    "Undo",
+    "Info",
+    "TimePlayer",
+    "Filters",
+    "Defaults",
+    "Bookmark",
+    "Sort",
+    "Zoom",
+    "NoDataIndicator",
+    "TimeTable",
+    "Share",
+    "Download"
+  ],
+  "objectFieldTypes": [
+    "TIME",
+    "NUMBER",
+    "MONEY",
+    "ATTRIBUTE",
+    "INTEGER"
+  ],
+  "variables": [
+    {
+      "name": "Group By",
+      "type": "group",
+      "descr": "",
+      "attributeType": [
+        "ATTRIBUTE",
+        "TIME"
+      ],
+      "defaultValue": {
+        "limit": 100
+      },
+      "colorMetric": false,
+      "colorNumb": 0,
+      "groupType": "attribute",
+      "required": true
+    },
+    {
+      "name": "Size",
+      "type": "metric",
+      "attributeType": [
+        "MONEY",
+        "INTEGER",
+        "NUMBER"
+      ],
+      "defaultValue": [
+        {
+          "name": "count"
+        }
+      ],
+      "colorMetric": false,
+      "colorNumb": 0,
+      "required": false
+    },
+    {
+      "name": "Color",
+      "type": "metric",
+      "attributeType": [
+        "MONEY",
+        "INTEGER",
+        "NUMBER"
+      ],
+      "defaultValue": [
+        {
+          "name": "count",
+          "colorConfig": {
+            "autoShowColorLegend": true
+          }
+        }
+      ],
+      "colorMetric": false,
+      "colorNumb": 2,
+      "metricType": "color",
+      "legendType": "palette",
+      "colorSet": "ZoomSequential",
+      "required": false
+    }
+  ],
+  "templateType": "BLANK"
+}
