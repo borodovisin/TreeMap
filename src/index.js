@@ -1,5 +1,5 @@
 import echarts from 'echarts';
-import { getNodeListFromData, getMetricTooltip } from './util';
+import { getNodeListFromData, getMetricTooltip } from './utils';
 import * as textContain from 'zrender/src/contain/text';
 
 import './index.css';
