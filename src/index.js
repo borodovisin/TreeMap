@@ -24,9 +24,10 @@ echarts.registerPostUpdate(() => {
     // Get access to shape list
     storage.updateDisplayList();
     storage._displayList.map(d => {
-      if (d.dataIndex && d.style.text) {
+      if (_.has(d, 'style.truncate') && d.__tmStorageName === 'content') {
         const textWidth = Math.floor(textContain.getBoundingRect(d.style.text, `${d.style.fontSize}px ${d.style.fontFamily}`, 
                           d.style.textAlign, d.style.textVerticalAlign, _.fill(Array(4), d.style.textPadding)).width);
+
         if (Math.floor(d.style.truncate.outerWidth) <= textWidth){
           if(Math.floor(d.style.truncate.outerHeight) <= textWidth) d.setStyle('text', '');
           else d.setStyle('textRotation', (90 * Math.PI / 180));
