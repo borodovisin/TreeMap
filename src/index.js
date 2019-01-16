@@ -23,7 +23,7 @@ echarts.registerPostUpdate(() => {
     // Get access to shape list
     storage.updateDisplayList();
     storage._displayList.map(d => {
-      if (_.has(d, 'style.truncate') && d.__tmStorageName === 'content') {
+      if (_.has(d, 'style.truncate') && _.isObject(d.style.truncate) && d.__tmStorageName === 'content') {
         const textWidth = Math.floor(textContain.getBoundingRect(d.style.text, `${d.style.fontSize}px ${d.style.fontFamily}`, 
                           d.style.textAlign, d.style.textVerticalAlign, _.fill(Array(4), d.style.textPadding)).width);
 
