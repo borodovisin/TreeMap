@@ -15,7 +15,6 @@ import './index.css';
  * @see http://www.zoomdata.com/developers/docs/custom-chart-api/creating-chart-container/
  */
 const chartContainer = document.createElement('div');
-chartContainer.id = 'idDivTreeMap';
 chartContainer.classList.add('chart-container');
 controller.element.appendChild(chartContainer);
 
@@ -38,7 +37,7 @@ echarts.registerPostUpdate(() => {
     });
 });
 
-const treeMap = echarts.init(document.querySelector('#idDivTreeMap'));
+const treeMap = echarts.init(chartContainer);
 
 const option = {
     series: [{

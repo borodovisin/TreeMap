@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "start": "webpack --mode development --watch"
+    "start": "webpack --mode development --watch",
+    "test": "jest"
   },
   "devDependencies": {
     "copy-webpack-plugin": "4.5.1",
