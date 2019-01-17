@@ -25,7 +25,7 @@ echarts.registerPostUpdate(() => {
     storage._displayList.map(d => {
       if (_.has(d, 'style.truncate.outerWidth') && _.has(d, 'style.truncate.outerHeight') && d.__tmStorageName === 'content') {
         const textWidth = Math.floor(textContain.getBoundingRect(d.style.text, `${d.style.fontSize}px ${d.style.fontFamily}`, 
-                          d.style.textAlign, d.style.textVerticalAlign, _.fill(Array(4), d.style.textPadding)).width);
+                          d.style.textAlign, d.style.textVerticalAlign, _.fill(Array(4), (d.style.textPadding || 0))).width);
 
         if (Math.floor(d.style.truncate.outerWidth) <= textWidth){
           if(Math.floor(d.style.truncate.outerHeight) <= textWidth) d.setStyle('text', '');
